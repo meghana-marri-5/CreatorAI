@@ -11,7 +11,7 @@ CreatorAI is an enterprise-grade full-stack marketplace connecting brands and cr
 The repository is modularly organized into dedicated directories for frontend, backend, database, and legacy components:
 
 ```
-AI-Content-Creator-Marketplace/
+CreatorAI/
 ├── frontend/                     # Modern React 19 + TypeScript + Vite + Tailwind CSS SPA
 │   ├── src/                      # Source code (Components, Pages, Context, Services, Data, Types)
 │   ├── index.html                # Vite HTML entry point
