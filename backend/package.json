@@ -1,0 +1,21 @@
+{
+  "name": "creator-ai-marketplace-backend",
+  "version": "1.0.0",
+  "description": "CreatorAI backend server for AI brief generation and portfolio assistance",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "ai",
+    "creator",
+    "marketplace",
+    "gemini",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}

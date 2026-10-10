@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CreatorAI — AI Content Creator Marketplace</title>
+  <meta name="description" content="Connect leading brands with verified AI creators for commercial video diffusion, generative imagery, virtual influencers, and synthetic voice. 100% commercial rights cleared.">
+  <meta name="keywords" content="AI creator marketplace, generative AI, Midjourney artists, Runway Gen-3 video director, virtual influencers, synthetic voice">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Site Header / Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo-wrapper" id="brandLogo">
+        <div class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+        </div>
+        <span>Creator<span class="gradient-text">AI</span></span>
+        <span class="logo-badge">Marketplace</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link active" id="navHome">Home</a></li>
+          <li><a href="#creators-section" class="nav-link" id="navCreators">Explore Creators</a></li>
+          <li><a href="#projects-section" class="nav-link" id="navProjects">Project Listings</a></li>
+          <li><a href="#brief-builder-section" class="nav-link" id="navBriefBuilder">Brief Builder</a></li>
+          <li><a href="#ai-assistant-section" class="nav-link" id="navAiAssistant">AI Assistant</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-secondary btn-sm" id="navExploreBtn" onclick="document.getElementById('creators-section').scrollIntoView({ behavior: 'smooth' });">
+          Find Creators
+        </button>
+        <button class="btn btn-primary btn-sm" id="navPostBtn">
+          Post a Project
+        </button>
+      </div>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="hero-glow-blob"></div>
+    <div class="container hero-content">
+      <div class="hero-announcement">
+        <span class="sparkle">✦</span>
+        <span>The Enterprise Standard for Commercial Generative AI Creation</span>
+      </div>
+
+      <h1 class="hero-title">
+        Connect Brands with Verified <br>
+        <span class="gradient-text">AI Content Creators</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Commission broadcast-grade video diffusion, editorial lookbooks, persistent virtual influencers, and synthetic audio. Every creator is vetted for prompt craft, quality control, and 100% commercial rights clearance.
+      </p>
+
+      <div class="hero-cta-group">
+        <button class="btn btn-primary btn-lg" id="heroExploreBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Explore Creators
+        </button>
+        <button class="btn btn-secondary btn-lg" id="heroPostBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          Post a Project Brief
+        </button>
+      </div>
+
+      <!-- Trust & Scale Metrics -->
+      <div class="hero-stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">1,200+</div>
+          <div class="stat-label">Verified AI Artists</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">$3.4M+</div>
+          <div class="stat-label">Project Volume</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Commercial Buyout Cleared</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">&lt; 24h</div>
+          <div class="stat-label">Average Match Turnaround</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       How It Works / Marketplace Flow
+       ========================================================================== -->
+  <section class="section" style="padding-top: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+        <span class="section-tag">Streamlined Pipeline</span>
+        <h2 class="section-title">How CreatorAI Works</h2>
+        <p class="section-desc" style="margin: 0 auto;">From rough ideation to commercial release with legal indemnity.</p>
+      </div>
+
+      <div class="how-it-works-grid">
+        <div class="hiw-card">
+          <div class="hiw-step-num">Step 01</div>
+          <h3>Draft or Generate Brief</h3>
+          <p>Use our structured brief builder or turn rough notes into precise prompts and camera specs with the AI Assistant.</p>
+        </div>
+        <div class="hiw-card">
+          <div class="hiw-step-num">Step 02</div>
+          <h3>Select Verified AI Talent</h3>
+          <p>Review creators with proven portfolios across Runway Gen-3, Midjourney v6, Flux.1, and custom trained ComfyUI nodes.</p>
+        </div>
+        <div class="hiw-card">
+          <div class="hiw-step-num">Step 03</div>
+          <h3>Receive Cleared Masters</h3>
+          <p>Get ProRes video, 300 DPI master files, and trained LoRA weights with guaranteed commercial copyright assignment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Creator Directory Section
+       ========================================================================== -->
+  <section class="section" id="creators-section">
+    <div class="container">
+      <div class="section-header">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="section-tag">Talent Directory</span>
+            <h2 class="section-title">Explore Verified AI Creators</h2>
+            <p class="section-desc">Browse industry-leading AI directors, virtual character sculptors, and synthetic audio producers.</p>
+          </div>
+          <div>
+            <span class="logo-badge" id="creatorCountBadge" style="font-size: 0.85rem; padding: 0.45rem 1rem;">
+              Showing 8 of 8 Creators
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search and Filter Bar -->
+      <div class="filter-wrapper">
+        <div class="filter-top-row">
+          <div class="search-input-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="creatorSearchInput" class="search-input" placeholder="Search by creator name, skill, AI tool, or specialization...">
+            <button class="search-clear-btn" id="creatorSearchClear" aria-label="Clear search">✕</button>
+          </div>
+
+          <div>
+            <select id="creatorToolSelect" class="select-control" aria-label="Filter by AI Tool">
+              <option value="all">All AI Tools</option>
+              <option value="Runway">Runway Gen-3</option>
+              <option value="Midjourney">Midjourney</option>
+              <option value="ComfyUI">ComfyUI / SD</option>
+              <option value="Flux">Flux.1</option>
+              <option value="ElevenLabs">ElevenLabs</option>
+              <option value="HeyGen">HeyGen</option>
+              <option value="Blender">Blender 3D</option>
+            </select>
+          </div>
+
+          <div>
+            <select id="creatorSortSelect" class="select-control" aria-label="Sort Creators">
+              <option value="rating-desc">Top Rated (Highest)</option>
+              <option value="projects-desc">Most Completed Projects</option>
+              <option value="rate-asc">Rate: Low to High</option>
+              <option value="rate-desc">Rate: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Filter Chips -->
+        <div class="filter-categories-row">
+          <button class="filter-chip active" data-category="all">All Specializations</button>
+          <button class="filter-chip" data-category="video">AI Video Diffusion</button>
+          <button class="filter-chip" data-category="imagery">Generative Imagery & Editorial</button>
+          <button class="filter-chip" data-category="virtual-influencer">Virtual Influencers & 3D</button>
+          <button class="filter-chip" data-category="concept-art">Concept Art & Worldbuilding</button>
+          <button class="filter-chip" data-category="audio">Synthetic Audio & Voice</button>
+        </div>
+
+        <!-- Filter Status & Active Pills -->
+        <div class="filter-status-bar">
+          <div class="active-filter-tags" id="activeFilterTags"></div>
+          <button class="btn btn-ghost btn-sm" id="resetFiltersBtn" style="font-size: 0.8rem;">
+            Reset All Filters
+          </button>
+        </div>
+      </div>
+
+      <!-- Empty State for Creators -->
+      <div class="empty-state" id="creatorsEmptyState" style="display: none;">
+        <div class="empty-state-icon">🔍</div>
+        <h3 class="empty-state-title">No Creators Found</h3>
+        <p class="empty-state-desc">We couldn't find any creators matching your active search criteria. Try modifying your filters or search keywords.</p>
+        <button class="btn btn-secondary" onclick="resetAllCreatorFilters()">Clear All Filters</button>
+      </div>
+
+      <!-- Creator Cards Grid Container -->
+      <div class="creators-grid" id="creatorsGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Project Brief Builder Section (With Live Preview)
+       ========================================================================== -->
+  <section class="section" id="brief-builder-section" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Brand Portal</span>
+        <h2 class="section-title">Project Brief Builder</h2>
+        <p class="section-desc">Create a structured brief for our creator network. Specify technical deliverables, budget, and commercial terms.</p>
+      </div>
+
+      <div class="brief-builder-layout">
+        <!-- Form Left Column -->
+        <div class="brief-form-card">
+          <!-- AI Banner Callout -->
+          <div class="ai-assistant-banner">
+            <div class="ai-banner-content">
+              <h4>✨ Need Help Structuring Your Brief?</h4>
+              <p>Use our AI Brief Assistant to transform messy ideas into technical prompt specs & timelines.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" type="button" id="openAiAssistantFromBuilderBtn">
+              Launch AI Assistant
+            </button>
+          </div>
+
+          <form id="briefBuilderForm" novalidate>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="briefTitle" class="form-label">
+                  <span>Project Title *</span>
+                  <span class="form-hint">E.g., 15s Cyberpunk Video Ad</span>
+                </label>
+                <input type="text" id="briefTitle" class="form-input" placeholder="Give your project a concise, clear title" required>
+                <div class="form-validation-feedback">Please enter a valid project title (at least 6 characters).</div>
+              </div>
+
+              <div class="form-group">
+                <label for="briefBrand" class="form-label">
+                  <span>Brand or Company Name *</span>
+                  <span class="form-hint">E.g., Nexus Energy</span>
+                </label>
+                <input type="text" id="briefBrand" class="form-input" placeholder="Your brand or organization" required>
+                <div class="form-validation-feedback">Please provide your brand name.</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="briefIdea" class="form-label">
+                <span>Creative Idea & Deliverables Scope *</span>
+                <span class="form-hint">Describe the visual tone, characters, key moments, and needs</span>
+              </label>
+              <textarea id="briefIdea" class="form-textarea" placeholder="Describe the scene, mood, camera style, desired pacing, or reference inspirations..." rows="4" required></textarea>
+              <div class="form-validation-feedback">Please provide detailed requirements (at least 15 characters).</div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="briefType" class="form-label">
+                  <span>Content Type *</span>
+                </label>
+                <select id="briefType" class="form-select">
+                  <option value="AI Video">AI Video Diffusion (Cinematic / Commercial)</option>
+                  <option value="Generative Imagery">Generative Imagery (Editorial / Fashion)</option>
+                  <option value="Virtual Influencer">Virtual Influencer & 3D Gaussian Splats</option>
+                  <option value="Product Staging">Photorealistic Product Staging & CPG</option>
+                  <option value="Concept Art">Concept Art & Keyframe Worldbuilding</option>
+                  <option value="Voice & Audio">Synthetic Voiceover, Foley & Generative Audio</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="briefStyle" class="form-label">
+                  <span>Preferred Aesthetic / Style</span>
+                </label>
+                <input type="text" id="briefStyle" class="form-input" placeholder="E.g., Photorealistic, Cyberpunk, Scandinavian Minimalist">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="briefPlatform" class="form-label">
+                  <span>Target Platform & Aspect Ratio</span>
+                </label>
+                <select id="briefPlatform" class="form-select">
+                  <option value="TikTok & Reels (9:16 Vertical)">TikTok & Instagram Reels (9:16 Vertical)</option>
+                  <option value="YouTube & Web (16:9 Landscape)">YouTube & Web (16:9 Landscape)</option>
+                  <option value="Square Social & Feed (1:1 & 4:5)">Square Social & Feed (1:1 & 4:5)</option>
+                  <option value="Print & Billboard (300 DPI High-Res)">Print & Billboard (300 DPI High-Res)</option>
+                  <option value="Multi-Platform Full Delivery Package">Multi-Platform Full Delivery Package</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="briefDeadline" class="form-label">
+                  <span>Turnaround Deadline</span>
+                </label>
+                <select id="briefDeadline" class="form-select">
+                  <option value="7">Urgent Sprint (7 Days)</option>
+                  <option value="14" selected>Standard Production (14 Days)</option>
+                  <option value="21">Extended Milestone (21 Days)</option>
+                  <option value="30">Monthly Comprehensive Retainer (30 Days)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="briefBudget" class="form-label">
+                <span>Estimated Budget ($USD) *</span>
+                <span class="form-hint">E.g., $1,200 - $1,800 or $2,500</span>
+              </label>
+              <input type="text" id="briefBudget" class="form-input" placeholder="Estimated project budget (e.g., $1,500)" required>
+              <div class="form-validation-feedback">Please enter a budget amount.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                <span>Commercial-Use & Legal Requirements</span>
+              </label>
+              <div class="checkboxes-grid">
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" name="commercialRights" value="Full Commercial Buyout" checked>
+                  <span>Full Commercial Buyout</span>
+                </label>
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" name="commercialRights" value="Perpetual IP Transfer" checked>
+                  <span>Perpetual IP Transfer</span>
+                </label>
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" name="commercialRights" value="Paid Advertising Rights">
+                  <span>Paid Advertising Clearance</span>
+                </label>
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" name="commercialRights" value="Source Seeds & LoRA Weights">
+                  <span>Source Seeds & LoRA Weights</span>
+                </label>
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" name="commercialRights" value="Non-Disclosure Agreement (NDA)">
+                  <span>Mutual NDA Required</span>
+                </label>
+                <label class="custom-checkbox-label">
+                  <input type="checkbox" name="commercialRights" value="Raw 4K ProRes Masters">
+                  <span>Raw 4K ProRes Masters</span>
+                </label>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <button type="submit" class="btn btn-primary btn-lg" id="submitBriefBtn" style="width: 100%;">
+                Publish Project Brief to Marketplace
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Live Brief Preview Right Column -->
+        <div class="brief-preview-sticky">
+          <div class="brief-preview-card">
+            <div class="preview-badge-header">
+              <span>Live Brief Preview</span>
+              <span class="logo-badge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">
+                Status: Ready to Post
+              </span>
+            </div>
+
+            <h3 class="preview-project-title" id="previewTitle">Your Project Brief Title</h3>
+            
+            <div style="font-size: 0.85rem; color: var(--accent-blue); margin-bottom: 0.85rem;">
+              🏢 Brand: <strong id="previewBrand">Your Brand Name</strong>
+            </div>
+
+            <div class="preview-meta-chips">
+              <span class="project-spec-pill" id="previewType">AI Video</span>
+              <span class="project-spec-pill" id="previewStyle">Cinematic Photorealism</span>
+              <span class="project-spec-pill" id="previewPlatform">TikTok / Reels 9:16</span>
+              <span class="project-spec-pill" id="previewDeadline" style="color: var(--accent-amber);">14 days delivery</span>
+            </div>
+
+            <div style="font-size: 1.15rem; font-weight: 800; color: #34d399; margin-bottom: 1rem;" id="previewBudget">
+              $1,000 - $2,000
+            </div>
+
+            <p class="preview-desc-text" id="previewDescription">
+              Describe the creative vision, objectives, and specific deliverables for this project...
+            </p>
+
+            <div class="preview-commercial-box" id="previewRights">
+              🛡️ <strong>Rights:</strong> Commercial Usage Clearance
+            </div>
+
+            <div style="margin-top: 1.25rem; font-size: 0.775rem; color: var(--text-muted); text-align: center;">
+              Brief will be visible immediately in the Project Listings section below.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Project Listings Section
+       ========================================================================== -->
+  <section class="section" id="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="section-tag">Marketplace Opportunities</span>
+            <h2 class="section-title">Open Project Briefs</h2>
+            <p class="section-desc">Active briefs from brands seeking AI directors, artists, and creators. Apply directly with your portfolio.</p>
+          </div>
+          <div>
+            <span class="logo-badge" id="projectsCountBadge" style="font-size: 0.85rem; padding: 0.45rem 1rem;">
+              4 Active Briefs
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects Search & Filter Bar -->
+      <div class="projects-filter-bar">
+        <div class="search-input-box" style="flex: 1; max-width: 500px;">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="projectSearchInput" class="search-input" placeholder="Search briefs by keyword, brand, or requirements...">
+        </div>
+
+        <div>
+          <select id="projectCategorySelect" class="select-control" aria-label="Filter Briefs by Category">
+            <option value="all">All Content Types</option>
+            <option value="Video">AI Video</option>
+            <option value="Imagery">Generative Imagery</option>
+            <option value="Voice">Voice & Audio</option>
+            <option value="Product">Product Staging</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Empty State for Projects -->
+      <div class="empty-state" id="projectsEmptyState" style="display: none;">
+        <div class="empty-state-icon">📂</div>
+        <h3 class="empty-state-title">No Projects Found</h3>
+        <p class="empty-state-desc">There are no open project briefs matching your criteria. Be the first brand to publish one!</p>
+        <button class="btn btn-primary" onclick="document.getElementById('brief-builder-section').scrollIntoView({ behavior: 'smooth' });">
+          Post a Brief Now
+        </button>
+      </div>
+
+      <!-- Project Cards Container -->
+      <div class="projects-grid" id="projectsContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       AI Creative Brief Assistant Section
+       ========================================================================== -->
+  <section class="section" id="ai-assistant-section" style="background: var(--bg-secondary); border-top: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Smart Creative Engine</span>
+        <h2 class="section-title">AI Creative Brief Assistant</h2>
+        <p class="section-desc">Turn fragmented notes and raw concepts into an exhaustive, production-grade creative brief with prompt syntax, technical specs, and budget benchmarks.</p>
+      </div>
+
+      <div class="assistant-workspace">
+        <!-- Engine Status Indicator (Requirement: clearly state fallback rather than pretending live AI) -->
+        <div class="engine-mode-status-bar">
+          <div>
+            <span class="engine-indicator-dot"></span>
+            <strong>Engine:</strong> Smart Generative Heuristics Engine (Offline/Local Engine Mode — Instant &amp; Zero API Key Needed)
+          </div>
+          <div>
+            <span>Status: 100% Operational &amp; Deterministic</span>
+          </div>
+        </div>
+
+        <div class="assistant-prompt-box">
+          <label for="aiRoughInput" class="form-label" style="font-size: 0.95rem; margin-bottom: 0.65rem;">
+            <span>Enter Your Rough Idea or Fragmented Notes:</span>
+            <span class="form-hint">Describe in your own words what you want to create</span>
+          </label>
+          <textarea id="aiRoughInput" class="assistant-input-textarea" placeholder="E.g., I want a futuristic cyberpunk video ad for an energy drink with glowing neon bubbles and fast camera cuts for TikTok..." rows="4"></textarea>
+
+          <!-- Quick Preset Chips -->
+          <div class="prompt-suggestions-wrap">
+            <div class="prompt-suggestions-title">Or Try an Instant Sample Concept:</div>
+            <div class="prompt-suggestion-chips">
+              <button type="button" class="suggestion-chip" data-prompt="High-octane neon cyberpunk video ad for Apex Volt energy drink with fast camera zooms and bass drops for TikTok">
+                ⚡ Cyberpunk Energy Drink Video
+              </button>
+              <button type="button" class="suggestion-chip" data-prompt="Minimalist winter cashmere fashion lookbook with natural skin pores and Nordic fjord landscapes for 300 DPI print">
+                🧥 Minimalist Fashion Lookbook
+              </button>
+              <button type="button" class="suggestion-chip" data-prompt="Photorealistic zero-shot cosmetic serum packshots on wet river stones with morning dew and soft light">
+                💧 Organic Skincare Staging
+              </button>
+              <button type="button" class="suggestion-chip" data-prompt="Immersive deep-space audio drama with 3 synthetic character voices, spaceship foley and binaural hums">
+                🎙️ Sci-Fi Synthetic Voice Drama
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-grid-2" style="margin-bottom: 1.75rem;">
+          <div class="form-group">
+            <label for="aiToneSelect" class="form-label">Desired Tone & Art Direction</label>
+            <select id="aiToneSelect" class="form-select">
+              <option value="Cinematic & High-End">Cinematic & High-End (35mm Anamorphic)</option>
+              <option value="Cyberpunk & Neon Futurist">Cyberpunk & Neon Futurist</option>
+              <option value="Scandinavian Minimalist">Scandinavian Minimalist & Organic</option>
+              <option value="Viral UGC & High-Energy">Viral UGC & High-Energy Social</option>
+              <option value="Moody Film Noir & Atmospheric">Moody Film Noir & Atmospheric</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="aiIndustrySelect" class="form-label">Industry Sector</label>
+            <select id="aiIndustrySelect" class="form-select">
+              <option value="Food & Beverage">Food & Beverage / CPG</option>
+              <option value="Fashion & Luxury Goods">Fashion & Luxury Goods</option>
+              <option value="Technology & Gaming">Technology & Gaming</option>
+              <option value="Beauty & Cosmetics">Beauty & Cosmetics</option>
+              <option value="Entertainment & Media">Entertainment & Media</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn btn-primary btn-lg" id="generateAiBriefBtn">
+            ✨ Generate Structured Creative Brief
+          </button>
+        </div>
+
+        <!-- Assistant Result Container -->
+        <div class="assistant-output-container" id="aiAssistantOutput">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Modals
+       ========================================================================== -->
+
+  <!-- Modal 1: Creator Full Profile Modal -->
+  <div class="modal-overlay" id="creatorProfileModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="creatorModalContent">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Apply to Project Modal -->
+  <div class="modal-overlay" id="applyModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 600px;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div style="padding: 2.25rem;">
+        <h3 style="font-size: 1.45rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">
+          Submit Application to Brief
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
+          Submit your proposal, estimated delivery timeframe, and quote to the client.
+        </p>
+
+        <div id="applyProjectSummary">
+          <!-- Injected dynamically -->
+        </div>
+
+        <form id="applyProjectForm">
+          <div class="form-group">
+            <label for="applyCreatorSelect" class="form-label">Select Applying Creator</label>
+            <select id="applyCreatorSelect" class="form-select">
+              <!-- Injected dynamically -->
+            </select>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label for="applyQuote" class="form-label">Your Proposed Quote ($)</label>
+              <input type="text" id="applyQuote" class="form-input" value="$1,500" required>
+            </div>
+            <div class="form-group">
+              <label for="applyTimeline" class="form-label">Delivery Timeline (Days)</label>
+              <input type="number" id="applyTimeline" class="form-input" value="7" min="1" max="60" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="applyPortfolio" class="form-label">Attached Portfolio Reel / Case Study</label>
+            <input type="text" id="applyPortfolio" class="form-input" value="Verified Commercial Portfolio Reel (ProRes / 4K)">
+          </div>
+
+          <div class="form-group">
+            <label for="applyPitch" class="form-label">Cover Pitch & Creative Approach *</label>
+            <textarea id="applyPitch" class="form-textarea" rows="3" placeholder="Explain your AI workflow, tooling, and why you are the ideal creator for this project..." required>I have extensive experience with this specific style and toolchain. I will deliver 3 camera cut variations, custom color grading, and complete commercial buyout clearance within schedule.</textarea>
+          </div>
+
+          <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; justify-content: flex-end;">
+            <button type="button" class="btn btn-secondary" onclick="closeModals()">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Application Confirmation Card Modal -->
+  <div class="modal-overlay" id="confirmationModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 540px;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="confirmationModalContent" style="padding: 1.5rem;">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: View Full Brief & Received Proposals Modal -->
+  <div class="modal-overlay" id="viewBriefModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 800px;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div id="viewBriefModalContent">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Toast Notifications Container
+       ========================================================================== -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-wrapper">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <span>Creator<span class="gradient-text">AI</span></span>
+          </div>
+          <p>
+            The dedicated marketplace connecting innovative brands with verified AI creators for commercial-grade video diffusion, generative imagery, and synthetic audio.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Marketplace</h5>
+          <ul>
+            <li><a href="#creators-section">Explore Creators</a></li>
+            <li><a href="#projects-section">Browse Projects</a></li>
+            <li><a href="#brief-builder-section">Post a Brief</a></li>
+            <li><a href="#ai-assistant-section">AI Brief Assistant</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>AI Disciplines</h5>
+          <ul>
+            <li><a href="#creators-section">Runway Video Directors</a></li>
+            <li><a href="#creators-section">Midjourney Editorial Artists</a></li>
+            <li><a href="#creators-section">Virtual Influencer Architects</a></li>
+            <li><a href="#creators-section">Synthetic Voice Engineers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal & Security</h5>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="showToast('Commercial Clearance Policy: 100% full perpetual buyout', 'info')">Commercial Clearance</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('IP Indemnification guarantee included on all marketplace contracts', 'info')">IP Indemnification</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Terms of Service: Standard enterprise creator agreements', 'info')">Terms of Service</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Privacy Policy: All creator prompts and source seeds secured', 'info')">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 CreatorAI Technologies Inc. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <span>Zero API Keys Exposed</span>
+          <span>•</span>
+          <span>100% Commercial Indemnity</span>
+          <span>•</span>
+          <span>Verified AI Talent</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
