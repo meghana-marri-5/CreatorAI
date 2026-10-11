@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [
     react()],
     base:'/CreatorAI/',
+})
     {
       name: 'ai-api-mock-handler',
       configureServer(server) {
